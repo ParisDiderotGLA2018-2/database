@@ -1,0 +1,61 @@
+{
+  _commentaire : Documents non correct, idée d'implémentation de la base de donnée.
+}
+
+
+PUT user {
+    "settings" : {
+        "number_of_shards" : 1
+    },
+    "mappings" : {
+        "username" : {
+            "properties" : {
+                "field1" : { "type" : "text" }
+            }
+        }
+        "email": {
+          "properties" : {
+              "field1" : {"type" : "text" }
+          }
+        }
+        "password" : {
+            properties : {
+              "field1" : {"type" : "password"}
+            }
+        }
+    }
+}
+
+PUT map {
+  "mappings" : {
+    name
+    visibily ( public private )
+    creator -> link username
+    loc -> link location (tab location one to many)
+    tag -> link tab
+    date_creat
+    date_fin
+
+
+  }
+}
+
+PUT location {
+    posX
+    posY
+    name
+    image -> link image
+}
+PUT message {
+  mess_text
+}
+PUT image {
+  url
+}
+PUT tag {
+  name
+}
+Put friend{
+  user1
+  user2
+}

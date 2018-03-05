@@ -1,0 +1,15 @@
+* TODO query :
+**  5 : {
+*** put  new url
+***  user login
+*** list noeud
+*** return mapto
+*** creat map
+}
+4 : {
+post message
+add friend
+}
+
+search user per id
+return tag name
