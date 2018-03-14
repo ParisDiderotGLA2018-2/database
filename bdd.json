@@ -1,61 +1,85 @@
 {
-  _commentaire : Documents non correct, idée d'implémentation de la base de donnée.
+  "_commentaire" : "Documents non correct, idée d'implémentation de la base de donnée."
 }
 
 
 PUT user {
-    "settings" : {
-        "number_of_shards" : 1
-    },
     "mappings" : {
-        "username" : {
+        "user" : {
             "properties" : {
-                "field1" : { "type" : "text" }
+                "username" : { "type" : "text" },
+                "email" : { "type" : "text" },
+                "password" : {"type" : "password"}
             }
         }
-        "email": {
-          "properties" : {
-              "field1" : {"type" : "text" }
-          }
-        }
-        "password" : {
-            properties : {
-              "field1" : {"type" : "password"}
-            }
-        }
-    }
+      }
 }
 
 PUT map {
   "mappings" : {
-    name
-    visibily ( public private )
-    creator -> link username
-    loc -> link location (tab location one to many)
-    tag -> link tab
-    date_creat
-    date_fin
-
-
+    "map" : {
+      "properties" : {
+        "name" : { "type": "text"},
+        "visibily" : {"type" : "integer"},
+        "creator" : {"type" : "text"},
+        "loc" : { "type":"integer" },
+        "tag" : { "type" : "integer"},
+        "date_creat" : {"type" : "date"}
+      }
+    }
   }
 }
 
 PUT location {
-    posX
-    posY
-    name
-    image -> link image
+  "mappings" : {
+    "location" : {
+      "properties" : {
+        "name": {"type": "text"},
+        "posX" : { "type" : "integer"},
+        "posY" : { "type": "integer"},
+        "image" : {"type" : "text"}
+      }
+    }
+  }
 }
 PUT message {
-  mess_text
+  "mappings" : {
+    "message" : {
+      "properties" : {
+        "mess_txt" : {
+          "type" : "text"
+        }
+      }
+    }
+  }
 }
 PUT image {
-  url
+  "mappings" : {
+    "image" : {
+      "properties" : {
+        "url" : {
+          "type" : "text"
+        }
+      }
+    }
+  }
 }
 PUT tag {
-  name
+  "mappings" : {
+    "tag" : {
+      "properties" : {
+        "name" : {"type" : "text"}
+      }
+    }
+  }
 }
 Put friend{
-  user1
-  user2
+  "mappings" : {
+    "tag" : {
+      "properties": {
+        "user1" : {"type":"text"},
+        "user2" : {"type" : "text"} 
+      }
+    }
+  }
 }
